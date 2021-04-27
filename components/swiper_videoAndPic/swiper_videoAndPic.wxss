@@ -1,0 +1,18 @@
+/* components/swiper_videoAndPic/swiper_videoAndPic.wxss */
+.media-components{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.media-swiper {
+  width: 100%;
+}
+
+.video-item,
+.image-item,.video,.image {
+  width: 100%;
+  height: 100%;
+}
+

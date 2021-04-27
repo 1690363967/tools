@@ -1,0 +1,8 @@
+<!--pages/initPage/initPage.wxml-->
+<view class="tolos-box">
+  <imageWeiper 
+    mediaData="{{swiperData}}"
+    autoplayVideo="{{true}}"
+    autoplaySwiper="{{false}}"
+    loop_T="{{false}}"></imageWeiper>
+</view> 

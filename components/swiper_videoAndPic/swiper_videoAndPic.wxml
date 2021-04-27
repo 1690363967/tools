@@ -1,0 +1,25 @@
+<!--components/swiper_videoAndPic/swiper_videoAndPic.wxml-->
+<!-- 
+  轮播自动播放和视频自动播放不同步开启
+  数据源   mediaData[
+    video:[...,{}],
+    image:[...,{}],
+  ]
+-->
+<view class="media-components">
+  <swiper class="media-swiper" autoplay="{{autoplaySwiper}}" indicator-dots="true" circular="true" interval="5000" bindchange="swiperChange" duration="500" indicator-color="#8799a3" indicator-active-color="#0081ff">
+    <!-- 视频媒体 -->
+    <swiper-item wx:if="{{mediaData.video.length}}" wx:for="{{mediaData.video}}" wx:key="index">
+      <view class="media-item video-item">
+        <video class="video" id="video_{{index}}" autoplay='{{autoplayVideo}}' loop="{{loop_T}}" bindplay="handlePlay" bindpause="handlePause" src="{{item.url}}">
+        </video>
+      </view>
+    </swiper-item>
+    <!--图片媒体-->
+    <swiper-item wx:for="{{mediaData.image}}" wx:key="index">
+      <view class="media-item image-item">
+        <image class="image" id="image_{{index}}" src="{{item.url}}" mode="widthFix" data-item='{{item}}'></image>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

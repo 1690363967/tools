@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "imageWeiper":"../../components/swiper_videoAndPic/swiper_videoAndPic"
+  }
+}
